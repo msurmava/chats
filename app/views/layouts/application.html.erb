@@ -29,7 +29,7 @@
   <% if alert %>
     <p class="alert alert-danger"><%= alert %></p>
   <% end %>
-    <%= render 'layouts/navbar'%>
+    <%= render 'layouts/navbar' if current_user%>
     <%= yield %>
   </body>
 </html>

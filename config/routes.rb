@@ -4,12 +4,11 @@ Rails.application.routes.draw do
     resources :messages
   end
   root 'pages#home'
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks"}
   devise_scope :user do
     # Redirests signing out users back to sign-in
     get "users", to: "devise/sessions#new"
   end
 
   get "users/:id", to: "users#show", as: 'user'
-
 end

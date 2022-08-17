@@ -337,4 +337,7 @@ Devise.setup do |config|
   #   manager.default_strategies(scope: :user).unshift :some_external_strategy
   end
 
+  config.omniauth :google_oauth2,Rails.application.credentials.dig(:GOOGLE_CLIENT_ID), Rails.application.credentials.dig(:GOOGLE_CLIENT_SECRET), {}
+
+
 end

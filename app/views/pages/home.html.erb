@@ -1,9 +1,13 @@
-<h1>chats</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<% if current_user%>
-  <%= link_to "start chatting", rooms_path %>
-  <%= button_to "Logout", destroy_user_session_path, method: :delete %>
-<%else%>
-  <%= link_to "log in", new_user_session_path%>
-  <%= link_to "Sign up", new_user_registration_path%>
-<%end%>
+
+<div class="homepage">
+
+    
+    <% if current_user%>
+      <%= link_to "start chatting", rooms_path %>
+      <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+    <%else%>
+    <h1> Talk to someone </h1>
+      you just need to <%= link_to "log in", new_user_session_path%>
+      or <%= link_to "Sign up", new_user_registration_path%>
+    <%end%>
+</div>

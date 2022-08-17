@@ -19,7 +19,7 @@
 }
 .msg-form {
   width: 100%;
-  height: 56px;
+  height: 60px;
   padding: 10px;
 }
 
@@ -66,4 +66,17 @@
   background-color: #ffffff;
   padding: 10px;
   color: black;
+}
+
+.registration {
+  position: relative;
+  top: 200px;
+  text-align: center;
+  
+}
+
+.homepage {
+  position: relative;
+  top: 500px;
+  text-align: center;
 }
