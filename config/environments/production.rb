@@ -107,7 +107,18 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
    # confirmations
-   config.action_mailer.default_url_options = { host: 'bloggold.herokuapp.com', protocol: 'https' }
+   config.action_mailer.default_url_options = { host: 'talktosomeone.herokuapp.com', protocol: 'https' }
    config.action_mailer.perform_deliveries = true
    config.action_mailer.delivery_method = :smtp
+
+  # GMAIL
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: 587,
+    domain: 'talktosomeone.herokuapp.com',
+    user_name: '1surmavamariam@gmail.com',
+    password: 'zgohdioygarpxqpm',
+    authentication: :plain,
+    enable_starttls_auto: true
+  }
 end
