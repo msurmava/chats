@@ -82,3 +82,6 @@ gem 'omniauth-rails_csrf_protection'
 group :development, :test do 
   gem 'dotenv-rails'
 end
+
+
+gem 'aws-sdk-s3'
