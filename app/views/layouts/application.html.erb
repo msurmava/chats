@@ -23,13 +23,13 @@
   </head>
 
   <body>
+      <%= render 'layouts/navbar' if current_user%>
   <% if notice %>
     <p class="alert alert-success"><%= notice %></p>
   <% end %>
   <% if alert %>
     <p class="alert alert-danger"><%= alert %></p>
   <% end %>
-    <%= render 'layouts/navbar' if current_user%>
     <%= yield %>
   </body>
 </html>
