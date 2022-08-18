@@ -23,7 +23,7 @@
   </head>
 
   <body>
-      <%= render 'layouts/navbar' if current_user%>
+      <%= render 'layouts/navbar' if current_user && !current_page?(controller: 'pages', action: 'home')%>
   <% if notice %>
     <p class="alert alert-success"><%= notice %></p>
   <% end %>

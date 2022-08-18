@@ -3,9 +3,11 @@
 
     
     <% if current_user%>
-      <%= link_to "start chatting", rooms_path,:class => "btn btn-primary btn-lg "  %>
+      <span><%= link_to "start chatting", rooms_path,:class => "btn btn-primary btn-lg "  %></span>
+      <p></p>
+      <span> <%= button_to "Log out", destroy_user_session_path, method: :delete, class: 'btn btn-xs'  %> </span> 
     <%else%>
-    <h1> talk to someone </h1>
+      <h1> talk to someone </h1>
       you just need to <%= link_to "log in", new_user_session_path%>
       or <%= link_to "Sign up", new_user_registration_path%>
     <%end%>
