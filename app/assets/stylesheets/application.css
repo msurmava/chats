@@ -71,12 +71,20 @@
 .registration {
   position: relative;
   top: 200px;
+  width: 400px;
   text-align: center;
-  
+
 }
 
 .homepage {
   position: relative;
-  top: 500px;
+  top: 400px;
   text-align: center;
 }
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  }
